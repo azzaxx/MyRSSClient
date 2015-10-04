@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="358dp"
+        android:layout_weight="2.67"
+        tools:listitem="@layout/list_item" >
+    </ListView>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="Enter URL here" />
+
+    <Button
+        android:id="@+id/addRssBut"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Add RSS URL" />
+
+</LinearLayout>
