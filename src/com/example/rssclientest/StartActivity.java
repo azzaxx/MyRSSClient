@@ -14,6 +14,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -55,6 +56,17 @@ public class StartActivity extends Activity {
 				startActivity(postviewIntent);
 			}
 		});
+
+		final Handler handler = new Handler();
+		handler.postDelayed(new Runnable() {
+
+			@Override
+			public void run() {
+				myAdapter.notifyDataSetChanged();
+				handler.postDelayed(this, 60 * 3000);
+				Log.d("MyLog", "tick..");
+			}
+		}, 60 * 3000);
 	}
 
 	public class HTTPConnection extends
